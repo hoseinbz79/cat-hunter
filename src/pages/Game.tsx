@@ -430,7 +430,7 @@ export default function Game() {
           </h1>
 
           <p className="text-secondary text-sm leading-relaxed max-w-xs">
-            ع¯ط±ط¨ظ‡ ط±ظˆ ط­ط±ع©طھ ط¨ط¯ظ‡ ظˆ ظ…ظˆط´â€Œظ‡ط§ ط±ظˆ ظ‚ط¨ظ„ ط§ط² ط§طھظ…ط§ظ… ظˆظ‚طھ ط¨ع¯غŒط±!
+            ع¯ط±ط¨ظ‡ ط±ط§ ط­ط±ع©طھ ط¨ط¯ظ‡ ظˆ ظ…ظˆط´â€Œظ‡ط§ ط±ط§ ظ‚ط¨ظ„ ط§ط² ط§طھظ…ط§ظ… ظˆظ‚طھ ط¨ع¯غŒط±!
             ظ‡ط± ظ…ظˆط´ = غ±غ° ط§ظ…طھغŒط§ط²
           </p>
 
@@ -441,13 +441,13 @@ export default function Game() {
             </div>
 
             <div className="flex items-center gap-2">
-              <span>ًںŒ³</span>
+              <span>ظ‹ع؛إ’آ³</span>
               <span>ط¯ط±ط®طھ ظˆ ط³ظ†ع¯: ظ…ط§ظ†ط¹</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <span>ًں’§</span>
-              <span>ط¢ط¨: ط±ط¯ ظ†ظ…غŒط´غŒ</span>
+              <span>ظ‹ع؛â€™آ§</span>
+              <span>ط¢ط¨: ط±ط¯ ظ†ظ…غŒâ€Œط´ظˆغŒ</span>
             </div>
           </div>
 
@@ -465,7 +465,7 @@ export default function Game() {
           </button>
 
           <p className="text-secondary text-xs mt-2">
-            ع©غŒط¨ظˆط±ط¯: ظپظ„ط´â€Œظ‡ط§ غŒط§ WASD | ظ…ظˆط¨ط§غŒظ„: ط³ظˆط§غŒظ¾
+            ط¹آ©ط؛إ’ط·آ¨ط¸ث†ط·آ±ط·آ¯: ط¸ظ¾ط¸â€‍ط·آ´أ¢â‚¬إ’ط¸â€،ط·آ§ ط؛إ’ط·آ§ WASD | ط¸â€¦ط¸ث†ط·آ¨ط·آ§ط؛إ’ط¸â€‍: ط·آ³ط¸ث†ط·آ§ط؛إ’ط¸آ¾
           </p>
         </div>
       )}
@@ -670,7 +670,7 @@ export default function Game() {
             className="mt-3 mb-4 text-sm text-secondary cursor-pointer underline"
           >
             {gameState === "playing"
-              ? "ظ…ع©ط« âڈ¸"
+              ? "ظ…ع©ط« âڈ¸ï¸ڈ"
               : "ط§ط¯ط§ظ…ظ‡ â–¶"}
           </button>
         </div>
@@ -678,10 +678,10 @@ export default function Game() {
 
       {gameState === "gameover" && (
         <div className="flex flex-col items-center justify-center min-h-dvh gap-5 px-6 text-center">
-          <div className="text-6xl">ًںک؟</div>
+          <div className="text-6xl">ظ‹ع؛ع©طں</div>
 
           <h2 className="text-2xl font-bold text-primary">
-            ط¨ط§ط²غŒ طھظ…ظˆظ… ط´ط¯!
+            ط¨ط§ط²غŒ طھظ…ط§ظ… ط´ط¯!
           </h2>
 
           <div className="flex flex-col gap-2">
@@ -705,7 +705,7 @@ export default function Game() {
           </div>
 
           <div className="text-secondary text-sm">
-            ط³ط·ط­ ط±ط³غŒط¯غŒ ط¨ظ‡: {level}
+            ط³ط·ط­ ط·آ±ط·آ³ط؛إ’ط·آ¯ط؛إ’ ط·آ¨ط¸â€،: {level}
           </div>
 
           <button
@@ -719,7 +719,7 @@ export default function Game() {
             onClick={() => setGameState("menu")}
             className="text-secondary text-sm underline cursor-pointer"
           >
-            ظ…ظ†ظˆ ط§طµظ„غŒ
+            ظ…ظ†ظˆغŒ ط§طµظ„غŒ
           </button>
         </div>
       )}
