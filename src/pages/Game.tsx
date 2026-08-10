@@ -33,11 +33,11 @@ interface Mouse {
 type GameState = "menu" | "playing" | "paused" | "gameover";
 
 const TILE_EMOJI: Record<TileType, string> = {
-  [TILE.GRASS]: "ًںŒ؟",
-  [TILE.TREE]: "ًںŒ³",
-  [TILE.ROCK]: "ًںھ¨",
-  [TILE.FLOWER]: "ًںŒ¸",
-  [TILE.POND]: "ًں’§",
+  [TILE.GRASS]: "🌿",
+  [TILE.TREE]: "🌳",
+  [TILE.ROCK]: "🪨",
+  [TILE.FLOWER]: "🌸",
+  [TILE.POND]: "💧",
 };
 
 const DIRS: Pos[] = [
@@ -423,7 +423,7 @@ export default function Game() {
     >
       {gameState === "menu" && (
         <div className="flex flex-col items-center justify-center min-h-dvh gap-6 px-6 text-center">
-          <div className="text-7xl animate-bounce">ًںگ±</div>
+          <div className="text-7xl animate-bounce">🐱</div>
 
           <h1 className="text-3xl font-bold text-primary tracking-tight">
             CAT HUNTER
@@ -436,24 +436,24 @@ export default function Game() {
 
           <div className="flex flex-col gap-2 text-sm text-secondary">
             <div className="flex items-center gap-2">
-              <span>ًںگ­</span>
+              <span>🐭</span>
               <span>CATCH THE MOUSE!</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <span>ًںŒ³</span>
+              <span>🌳</span>
               <span>TREES & ROCKS: BLOCK</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <span>ًں’§</span>
+              <span>💧</span>
               <span>WATER: BLOCKED</span>
             </div>
           </div>
 
           {highScore > 0 && (
             <div className="text-accent font-semibold text-sm">
-              ًںڈ† HIGH SCORE: {highScore}
+              🏆 HIGH SCORE: {highScore}
             </div>
           )}
 
@@ -461,7 +461,7 @@ export default function Game() {
             onClick={startGame}
             className="mt-2 px-8 py-3 rounded-lg bg-accent text-accent-fg font-semibold text-lg cursor-pointer hover:bg-accent-hover transition-colors"
           >
-            START GAME ًںژ®
+            START GAME 🎮
           </button>
 
           <p className="text-secondary text-xs mt-2">
@@ -487,7 +487,7 @@ export default function Game() {
               <span className="text-xs text-secondary">
                 LEVEL {level}
               </span>
-              <span className="text-2xl">ًںگ±</span>
+              <span className="text-2xl">🐱</span>
             </div>
 
             <div className="flex flex-col items-end">
@@ -558,7 +558,7 @@ export default function Game() {
                     zIndex: 5,
                   }}
                 >
-                  ًںگ­
+                  🐭
                 </div>
               ) : null
             )}
@@ -582,7 +582,7 @@ export default function Game() {
                   : "none",
               }}
             >
-              ًںگ±
+              🐱
             </div>
 
             {catchEffect && (
@@ -599,7 +599,7 @@ export default function Game() {
                     "popfade 0.5s ease-out forwards",
                 }}
               >
-                âœ¨
+                ✨
               </div>
             )}
 
@@ -611,7 +611,7 @@ export default function Game() {
                   zIndex: 30,
                 }}
               >
-                <span className="text-4xl">âڈ¸ï¸ڈ</span>
+                <span className="text-4xl">⏸️</span>
 
                 <span className="text-accent-fg font-bold text-xl">
                   PAUSED
@@ -634,7 +634,7 @@ export default function Game() {
               onPointerDown={() => moveCat(0, -1)}
               className="w-14 h-14 rounded-lg bg-raised border border-border text-2xl flex items-center justify-center cursor-pointer active:bg-inset"
             >
-              â–²
+              ▲
             </button>
 
             <div className="flex gap-1">
@@ -642,21 +642,21 @@ export default function Game() {
                 onPointerDown={() => moveCat(-1, 0)}
                 className="w-14 h-14 rounded-lg bg-raised border border-border text-2xl flex items-center justify-center cursor-pointer active:bg-inset"
               >
-                â—€
+                ◀
               </button>
 
               <button
                 onPointerDown={() => moveCat(0, 1)}
                 className="w-14 h-14 rounded-lg bg-raised border border-border text-2xl flex items-center justify-center cursor-pointer active:bg-inset"
               >
-                â–¼
+                ▼
               </button>
 
               <button
                 onPointerDown={() => moveCat(1, 0)}
                 className="w-14 h-14 rounded-lg bg-raised border border-border text-2xl flex items-center justify-center cursor-pointer active:bg-inset"
               >
-                â–¶
+                ▶
               </button>
             </div>
           </div>
@@ -670,15 +670,15 @@ export default function Game() {
             className="mt-3 mb-4 text-sm text-secondary cursor-pointer underline"
           >
             {gameState === "playing"
-              ? "PAUSED âڈ¸ï¸ڈ"
-              : "RESUME â–¶"}
+              ? "PAUSED ⏸️"
+              : "RESUME ▶"}
           </button>
         </div>
       )}
 
       {gameState === "gameover" && (
         <div className="flex flex-col items-center justify-center min-h-dvh gap-5 px-6 text-center">
-          <div className="text-6xl">ًںک؟</div>
+          <div className="text-6xl">😿</div>
 
           <h2 className="text-2xl font-bold text-primary">
             GAME OVER!
@@ -696,7 +696,7 @@ export default function Game() {
 
           {score >= highScore && score > 0 && (
             <div className="flex items-center gap-2 text-warning font-semibold">
-              ًںڈ† NEW RECORD!
+              🏆 NEW RECORD!
             </div>
           )}
 
@@ -705,14 +705,14 @@ export default function Game() {
           </div>
 
           <div className="text-secondary text-sm">
-            LEVEL ط±ط³غŒط¯غŒ ط¨ظ‡: {level}
+            LEVEL رسیدی به: {level}
           </div>
 
           <button
             onClick={startGame}
             className="mt-2 px-8 py-3 rounded-lg bg-accent text-accent-fg font-semibold text-lg cursor-pointer hover:bg-accent-hover transition-colors"
           >
-            PLAY AGAIN ًں”„
+            PLAY AGAIN 🔄
           </button>
 
           <button
