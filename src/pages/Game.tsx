@@ -426,34 +426,34 @@ export default function Game() {
           <div className="text-7xl animate-bounce">ًںگ±</div>
 
           <h1 className="text-3xl font-bold text-primary tracking-tight">
-            ع¯ط±ط¨ظ‡ ط´ع©ط§ط±ع†غŒ
+            CAT HUNTER
           </h1>
 
           <p className="text-secondary text-sm leading-relaxed max-w-xs">
-            ع¯ط±ط¨ظ‡ ط±ط§ ط­ط±ع©طھ ط¨ط¯ظ‡ ظˆ ظ…ظˆط´â€Œظ‡ط§ ط±ط§ ظ‚ط¨ظ„ ط§ط² ط§طھظ…ط§ظ… ظˆظ‚طھ ط¨ع¯غŒط±!
-            ظ‡ط± ظ…ظˆط´ = غ±غ° ط§ظ…طھغŒط§ط²
+            CATCH THE MICE BEFORE TIME RUNS OUT!
+            10 POINTS EACH
           </p>
 
           <div className="flex flex-col gap-2 text-sm text-secondary">
             <div className="flex items-center gap-2">
               <span>ًںگ­</span>
-              <span>ظ…ظˆط´: ط¨ط±ظˆ ط¨ع¯غŒط±ط´!</span>
+              <span>CATCH THE MOUSE!</span>
             </div>
 
             <div className="flex items-center gap-2">
               <span>ًںŒ³</span>
-              <span>ط¯ط±ط®طھ ظˆ ط³ظ†ع¯: ظ…ط§ظ†ط¹</span>
+              <span>TREES & ROCKS: BLOCK</span>
             </div>
 
             <div className="flex items-center gap-2">
               <span>ًں’§</span>
-              <span>ط¢ط¨: ط±ط¯ ظ†ظ…غŒâ€Œط´ظˆغŒ</span>
+              <span>WATER: BLOCKED</span>
             </div>
           </div>
 
           {highScore > 0 && (
             <div className="text-accent font-semibold text-sm">
-              ًںڈ† ط¨ظ‡طھط±غŒظ† ط§ظ…طھغŒط§ط²: {highScore}
+              ًںڈ† HIGH SCORE: {highScore}
             </div>
           )}
 
@@ -461,11 +461,11 @@ export default function Game() {
             onClick={startGame}
             className="mt-2 px-8 py-3 rounded-lg bg-accent text-accent-fg font-semibold text-lg cursor-pointer hover:bg-accent-hover transition-colors"
           >
-            ط´ط±ظˆط¹ ط¨ط§ط²غŒ ًںژ®
+            START GAME ًںژ®
           </button>
 
           <p className="text-secondary text-xs mt-2">
-            ع©غŒط¨ظˆط±ط¯: ظپظ„ط´â€Œظ‡ط§ غŒط§ WASD | ظ…ظˆط¨ط§غŒظ„: ط³ظˆط§غŒظ¾
+            ARROWS / WASD | MOBILE: SWIPE
           </p>
         </div>
       )}
@@ -477,7 +477,7 @@ export default function Game() {
             style={{ maxWidth: boardW + 8 }}
           >
             <div className="flex flex-col items-start">
-              <span className="text-xs text-secondary">ط§ظ…طھغŒط§ط²</span>
+              <span className="text-xs text-secondary">SCORE</span>
               <span className="text-xl font-bold text-primary">
                 {score}
               </span>
@@ -485,13 +485,13 @@ export default function Game() {
 
             <div className="flex flex-col items-center">
               <span className="text-xs text-secondary">
-                ط³ط·ط­ {level}
+                LEVEL {level}
               </span>
               <span className="text-2xl">ًںگ±</span>
             </div>
 
             <div className="flex flex-col items-end">
-              <span className="text-xs text-secondary">ط²ظ…ط§ظ†</span>
+              <span className="text-xs text-secondary">TIME</span>
               <span
                 className={`text-xl font-bold tabular-nums ${
                   timeLeft <= 10
@@ -614,7 +614,7 @@ export default function Game() {
                 <span className="text-4xl">âڈ¸ï¸ڈ</span>
 
                 <span className="text-accent-fg font-bold text-xl">
-                  ظ…ع©ط«
+                  PAUSED
                 </span>
 
                 <button
@@ -623,7 +623,7 @@ export default function Game() {
                   }
                   className="px-6 py-2 rounded-lg bg-accent text-accent-fg font-semibold cursor-pointer"
                 >
-                  ط§ط¯ط§ظ…ظ‡
+                  RESUME
                 </button>
               </div>
             )}
@@ -670,8 +670,8 @@ export default function Game() {
             className="mt-3 mb-4 text-sm text-secondary cursor-pointer underline"
           >
             {gameState === "playing"
-              ? "ظ…ع©ط« âڈ¸ï¸ڈ"
-              : "ط§ط¯ط§ظ…ظ‡ â–¶"}
+              ? "PAUSED âڈ¸ï¸ڈ"
+              : "RESUME â–¶"}
           </button>
         </div>
       )}
@@ -681,7 +681,7 @@ export default function Game() {
           <div className="text-6xl">ًںک؟</div>
 
           <h2 className="text-2xl font-bold text-primary">
-            ط¨ط§ط²غŒ طھظ…ط§ظ… ط´ط¯!
+            GAME OVER!
           </h2>
 
           <div className="flex flex-col gap-2">
@@ -690,36 +690,36 @@ export default function Game() {
             </div>
 
             <div className="text-secondary text-sm">
-              ط§ظ…طھغŒط§ط²
+              SCORE
             </div>
           </div>
 
           {score >= highScore && score > 0 && (
             <div className="flex items-center gap-2 text-warning font-semibold">
-              ًںڈ† ط±ع©ظˆط±ط¯ ط¬ط¯غŒط¯!
+              ًںڈ† NEW RECORD!
             </div>
           )}
 
           <div className="text-secondary text-sm">
-            ط¨ظ‡طھط±غŒظ†: {highScore}
+            BEST: {highScore}
           </div>
 
           <div className="text-secondary text-sm">
-            ط³ط·ط­ ط±ط³غŒط¯غŒ ط¨ظ‡: {level}
+            LEVEL ط±ط³غŒط¯غŒ ط¨ظ‡: {level}
           </div>
 
           <button
             onClick={startGame}
             className="mt-2 px-8 py-3 rounded-lg bg-accent text-accent-fg font-semibold text-lg cursor-pointer hover:bg-accent-hover transition-colors"
           >
-            ط¯ظˆط¨ط§ط±ظ‡ ط¨ط§ط²غŒ ع©ظ† ًں”„
+            PLAY AGAIN ًں”„
           </button>
 
           <button
             onClick={() => setGameState("menu")}
             className="text-secondary text-sm underline cursor-pointer"
           >
-            ظ…ظ†ظˆغŒ ط§طµظ„غŒ
+            MAIN MENU
           </button>
         </div>
       )}
